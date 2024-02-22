@@ -5,8 +5,10 @@ export default {
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, "index.html"),
-        view: path.resolve(__dirname, "view.html"),
-        controller: path.resolve(__dirname, "controller.html"),
+        hut: path.resolve(__dirname, "hut.html"),
+        robot: path.resolve(__dirname, "robot.html"),
+        house: path.resolve(__dirname, "house.html"),
+
       },
     },
   },

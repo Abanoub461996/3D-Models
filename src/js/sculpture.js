@@ -4,6 +4,7 @@ import { GUI } from "three/addons/libs/lil-gui.module.min.js";
 
 import { PLYLoader } from "three/addons/loaders/PLYLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import "./../css/style.css";
 
 let renderer, scene, camera;
 
@@ -15,7 +16,7 @@ function init() {
   renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
+  document.getElementById("container").appendChild(renderer.domElement);
 
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -45,7 +46,7 @@ function init() {
   const ambient = new THREE.HemisphereLight(0xffffff, 0x8d8d8d, 0.15);
   scene.add(ambient);
 
-  const loader = new THREE.TextureLoader().setPath("textures/");
+  const loader = new THREE.TextureLoader().setPath("sculpture/");
   const filenames = ["disturb.jpg"];
 
   const textures = { none: null };
@@ -93,7 +94,7 @@ function init() {
 
   //
 
-  new PLYLoader().load("Lucy100k.ply", function (geometry) {
+  new PLYLoader().load("sculpture/Lucy100k.ply", function (geometry) {
     geometry.scale(0.0024, 0.0024, 0.0024);
     geometry.computeVertexNormals();
 

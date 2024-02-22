@@ -1,197 +1,51 @@
 body {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-color: #bfe3dd;
+  position: relative;
+}
+.routers {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 5%;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  gap: 1em;
+}
+.routing_btn {
+  box-sizing: border-box;
+  width: 12em;
+  height: 3em;
+  font-size: 16px;
+  border-radius: 0.5em;
+  margin: 0.5em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  line-height: 3em;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin: 0;
-    padding: 0;
+.routing_btn:nth-child(odd) {
+  background: linear-gradient(to right, orange, tomato);
+  text-align: left;
+  padding-left: 10%;
+  transform: perspective(300px) rotateY(45deg);
 }
 
-.control {
-    background: gray;
+.routing_btn:nth-child(even) {
+  background: linear-gradient(to left, orange, tomato);
+  text-align: right;
+  padding-right: 10%;
+  transform: perspective(300px) rotateY(-45deg);
 }
 
-#control__menu {
-    position: relative;
-    background-color: aqua;
-    height: 100vh;
-    width: 100vw;
-}
-
-.controller__btn {
-    /* position: absolute; */
-}
-
-#main__wrapper {
-    background: gray;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-}
-
-#header {
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding-inline: 2rem; */
-    padding-block: 0.7rem;
-    position: relative;
-}
-
-#header img,
-#footer img {
-    width: 100%;
-}
-
-#header div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#shingrix__logo {
-    width: 12vw;
-    position: relative;
-        right: 2%;
-}
-
-#gsk__logo {
-    width: 3.2vw;
-    position: relative;
-        left: 2.2%;
-
-}
-
-#footer__logo {
-    width: 10vw;
-}
-h5{
-    text-align: center;
-}
-#controllers__body {
-    background-image: url(../images/bigbg-03.png);
-    display: flex;
-    flex-grow: 1;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-#footer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: absolute;
-        bottom: 0%;
-            left: 1.7%;
-}
-
-#doctor {
-    width: 37vw;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#doctor img {
-    width: 100%;
-}
-
-.controller__btns {
-    position: absolute;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    padding-top: .4rem;
-    
-}
-
-.control__btn {
-    background: #d62027;
-    border: none;
-    outline: none;
-    width: 80%;
-    color: white;
-    height: 3.5vh;
-    font-weight: bold;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    cursor: pointer;
-}
-
-#hand__controller {
-    left: 5%;
-    top: 35%;
-    width: 15%;
-    min-width: 15%;
-}
-
-#facial__controller {
-    right: 5%;
-    top: 15%;
-    width: 15%;
-    min-width: 15%;
-}
-
-#leg__controller {
-    right: 17%;
-    top: 51%;
-    width: 15%;
-    min-width: 15%;
-}
-
-#camera__controller {
-left: .6%;
-    bottom: 13%;
-    width: 15%;
-    min-width: 15%;
-}
-#idle__controller {
-    right: 1%;
-        bottom: 13%;
-        width: 15%;
-        min-width: 15%;
-}
-#idle__controller button{
-    background-color: #d0d2d3;
-    color: #404041;
-
-}
-.highlight {
-    /* background-color: yellow !important; */
-}
-.view_btn{
-   background:  #9c1d20 !important
-}
-@media (max-width:1366px) {
-    #footer__logo {
-            width: 13vw;
-        }
-}
