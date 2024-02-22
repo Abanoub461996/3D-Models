@@ -1,5 +1,6 @@
 document.querySelectorAll(".routing_btn").forEach((btn) => {
   btn.addEventListener("click", () => {
-    window.location.href = btn.dataset.model;
+    const path = btn.dataset.model;
+    window.location.href = path === '/' ? '/<repository-name>' : path;
   });
 });
