@@ -1,9 +1,7 @@
 import path from "path";
-import { defineConfig } from 'vite'
-
 
 export default {
-  base: "/models/",
+  base: "/3D-Models/",
   build: {
     rollupOptions: {
       input: {
